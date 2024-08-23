@@ -31,7 +31,7 @@ public class SpringSecurity  {
                         .sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeRequests(authorizeRequests ->
                         authorizeRequests
-                                .requestMatchers("/todovale/**").authenticated()
+                                .requestMatchers("/todovale/**","/uservale/**").authenticated()
                                 .anyRequest().permitAll()
                 )
                 .httpBasic(withDefaults());
